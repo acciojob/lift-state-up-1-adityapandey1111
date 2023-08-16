@@ -1,1 +1,20 @@
-
+.parent {
+  background-color: rgb(61, 74, 219);
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.child {
+  background-color: red;
+  font-weight: bold;
+}
+.display {
+  font-weight: bold;
+  color: black;
+}
+.answer {
+  font-weight: 100;
+}
+.btn{
+    border-radius: 3px;
+}
