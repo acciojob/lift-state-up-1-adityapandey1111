@@ -5,7 +5,7 @@ const ChildComponent = ({ showModal, onButtonClick }) => {
     <div className="child">
       <h2>Child Component</h2>
       <button  className='btn' onClick={onButtonClick}>Show Modal</button>
-      {showModal && <p className='display'>Model Content</p>}
+      {showModal && <h3 className='display'>Model Content</h3>}
       {showModal && <p className='answer'>This is the model content.</p>}
     </div>
   );
