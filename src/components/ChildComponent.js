@@ -1,14 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const ChildComponent = ({ showModal, onButtonClick }) => {
-  return (
-    <div className="child">
-      <h2>Child Component</h2>
-      <button  className='btn' onClick={onButtonClick}>Show Modal</button>
-      {showModal && <h3 className='display'>Model Content</h3>}
-      {showModal && <p className='answer'>This is the model content.</p>}
-    </div>
-  );
-};
+const ChildComponent=(prop)=>{
+    return(
+        <div className="child">
+            <h2>Child Component</h2>
+            <button onClick={()=>prop.changeModal(true)}>Show Modal</button>
+            {
+                prop.Modal==true && <div>
+                <h3>Modal Content</h3>
+                <p>This is the modal content.</p>
+              </div>
+            }
+        </div>
+    )   
+}
 
-export default ChildComponent;
+export default ChildComponent

@@ -1,29 +1,14 @@
-import React, { Component } from 'react';
-import ChildComponent from './ChildComponent';
+import React, { useState } from "react";
+import ChildComponent from "./ChildComponent";
 
-class ParentComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showModal: false,
-    };
-  }
-
-  handleButtonClick = () => {
-    this.setState({ showModal: true });
-  };
-
-  render() {
+const ParentComponent=()=>{
+    let [showModal,setShowModal]=useState(false);
     return (
-      <div className="parent">
-        <h1>Parent Component</h1>
-        <ChildComponent
-          showModal={this.state.showModal}
-          onButtonClick={this.handleButtonClick}
-        />
-      </div>
-    );
-  }
+        <div className="parent">
+            <h1>Parent Component</h1>
+            <ChildComponent changeModal={setShowModal} Modal={showModal}/>
+        </div>
+    )
 }
 
-export default ParentComponent;
+export default ParentComponent
